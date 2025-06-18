@@ -14,6 +14,7 @@
 - 📫 Read my blogs: [ArixBit](https://aliliin.com)
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=arixbit&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
+
 <!--
 **arixbit/arixbit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -29,10 +30,3 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-
-![Stats](https://github-readme-stats.vercel.app/api?username=arixbit&show_icons=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=arixbit&layout=compact)
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=arixbit)](https://github.com/ryo-ma/github-profile-trophy)
-
-![3D Contribution](./path-to-3d-contribution-image.svg)
