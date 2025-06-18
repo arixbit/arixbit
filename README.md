@@ -3,11 +3,12 @@
   <img align="right" src="https://github-readme-stats.vercel.app/api?username=arixbit&hide=[%22issues%22]&show_icons=true" />
 </a>
 
-### Hi there 👋
+# 😄 Hi there, I'm ArixBit 👋
 
 🎉 Welcome to my GitHub profile!
 
 👨🏻‍💻 I'm ArixBit - a Go、PHP、Python developer
+📍 From China 
 
 - 💬 Ask me about anything an everything.
 - 📫 Read my blogs: [ArixBit](https://aliliin.com)
@@ -27,3 +28,11 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+
+![Stats](https://github-readme-stats.vercel.app/api?username=arixbit&show_icons=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=arixbit&layout=compact)
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=arixbit)](https://github.com/ryo-ma/github-profile-trophy)
+
+![3D Contribution](./path-to-3d-contribution-image.svg)
