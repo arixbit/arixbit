@@ -1,5 +1,18 @@
-## Hi there 👋
+<a href="https://github.com/arixbit">
+  <!-- Change the `github-readme-stats.anuraghazra1.vercel.app` to `github-readme-stats.vercel.app`  -->
+  <img align="right" src="https://github-readme-stats.vercel.app/api?username=arixbit&hide=[%22issues%22]&show_icons=true" />
+</a>
 
+### Hi there 👋
+
+🎉 Welcome to my GitHub profile!
+
+👨🏻‍💻 I'm hedeqiang - a Go、PHP、Python developer
+
+- 💬 Ask me about anything an everything.
+- 📫 Read my blogs: [ArixBit](https://aliliin.com)
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=arixbit&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
 <!--
 **arixbit/arixbit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
