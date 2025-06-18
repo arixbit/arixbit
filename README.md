@@ -7,7 +7,7 @@
 
 🎉 Welcome to my GitHub profile!
 
-👨🏻‍💻 I'm hedeqiang - a Go、PHP、Python developer
+👨🏻‍💻 I'm ArixBit - a Go、PHP、Python developer
 
 - 💬 Ask me about anything an everything.
 - 📫 Read my blogs: [ArixBit](https://aliliin.com)
