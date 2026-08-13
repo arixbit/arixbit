@@ -11,7 +11,7 @@
 📍 From China 
 
 - 💬 Ask me about anything an everything.
-- 📫 Read my blogs: [ArixBit](https://aliliin.com)
+- 📫 Read my blogs: [ArixBit](https://arixbit.me)
 
 [![trophy](https://github-profile-trophy.vercel.app/?username=arixbit&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
 
