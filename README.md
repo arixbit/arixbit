@@ -1,7 +1,3 @@
-<a href="https://github.com/arixbit">
-  <img align="right" width="380" alt="ArixBit GitHub profile statistics" src="./assets/profile-stats.svg" />
-</a>
-
 # 😄 Hi there, I'm ArixBit 👋
 
 🎉 Welcome to my GitHub profile!
@@ -11,6 +7,8 @@
 
 - 💬 Ask me about anything an everything.
 - 📫 Read my blogs: [ArixBit](https://arixbit.me)
+
+![ArixBit GitHub profile statistics](./assets/profile-stats.svg)
 
 ![ArixBit GitHub contributions](./assets/contributions.svg)
 
