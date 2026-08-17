@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import calendar
 from collections import Counter
 from datetime import date, datetime, timedelta, timezone
 from html import escape
@@ -125,25 +126,25 @@ def render_profile_stats(profile: dict[str, object], repositories: list[dict[str
         ("Total stars", stars),
     ]
     parts = [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="820" height="230" viewBox="0 0 820 230">',
-        '<rect width="820" height="230" rx="12" fill="#0d1117" stroke="#30363d"/>',
-        svg_text(28, 34, f"{LOGIN} / GitHub profile", 20, "#f0f6fc", "600"),
-        svg_text(28, 56, "Public profile metrics", 12, "#8b949e"),
+        '<svg xmlns="http://www.w3.org/2000/svg" width="820" height="148" viewBox="0 0 820 148">',
+        f'<title>GitHub profile statistics for {escape(LOGIN)}</title>',
+        '<rect width="820" height="148" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>',
+        svg_text(28, 29, "GitHub snapshot", 18, "#24292f", "600"),
+        svg_text(28, 49, f"{LOGIN} · public profile", 11, "#57606a"),
     ]
     for index, (label, value) in enumerate(cards):
         x = 28 + index * 192
         parts.extend(
             [
-                f'<rect x="{x}" y="78" width="176" height="78" rx="8" fill="#161b22" stroke="#21262d"/>',
-                svg_text(x + 14, 104, label, 12, "#8b949e"),
-                svg_text(x + 14, 138, format_number(value), 24, "#58a6ff", "600"),
+                f'<rect x="{x}" y="64" width="176" height="48" rx="8" fill="#ffffff" stroke="#d8dee4"/>',
+                svg_text(x + 14, 83, label, 10, "#57606a"),
+                svg_text(x + 14, 103, format_number(value), 19, "#0969da", "600"),
             ]
         )
     parts.extend(
         [
-            svg_text(28, 187, "Top languages", 12, "#8b949e"),
-            svg_text(28, 210, language_summary, 15, "#c9d1d9", "500"),
-            svg_text(590, 210, f"Updated {updated}", 11, "#8b949e"),
+            svg_text(28, 133, f"Languages: {language_summary}", 11, "#57606a"),
+            svg_text(650, 133, f"Updated {updated}", 10, "#57606a"),
             "</svg>",
         ]
     )
@@ -152,22 +153,29 @@ def render_profile_stats(profile: dict[str, object], repositories: list[dict[str
 
 def render_contributions(year: int, total: int, days: dict[str, int]) -> str:
     width = 820
-    grid_x = 92
-    grid_y = 48
+    grid_x = 74
+    grid_y = 62
     cell = 10
     gap = 3
     first_day = date(year, 1, 1)
     grid_start = first_day - timedelta(days=first_day.weekday())
-    colors = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
+    colors = ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
     parts = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="150" viewBox="0 0 {width} 150">',
-        f'<rect width="{width}" height="150" rx="12" fill="#0d1117" stroke="#30363d"/>',
-        svg_text(28, 28, f"{LOGIN} / contributions in {year}", 18, "#f0f6fc", "600"),
-        svg_text(28, 56, "Mon", 10, "#8b949e"),
-        svg_text(28, 82, "Wed", 10, "#8b949e"),
-        svg_text(28, 108, "Fri", 10, "#8b949e"),
-        svg_text(650, 28, f"{format_number(total)} total", 12, "#58a6ff", "600"),
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="180" viewBox="0 0 {width} 180">',
+        f'<title>{LOGIN} GitHub contributions in {year}</title>',
+        f'<rect width="{width}" height="180" rx="12" fill="#f6f8fa" stroke="#d0d7de"/>',
+        svg_text(28, 30, f"Contribution activity · {year}", 18, "#24292f", "600"),
+        svg_text(670, 30, f"{format_number(total)} total", 12, "#0969da", "600"),
+        svg_text(28, 76, "Mon", 10, "#57606a"),
+        svg_text(28, 102, "Wed", 10, "#57606a"),
+        svg_text(28, 128, "Fri", 10, "#57606a"),
     ]
+    for month in range(1, 13):
+        month_start = date(year, month, 1)
+        column = (month_start - grid_start).days // 7
+        parts.append(
+            svg_text(grid_x + column * (cell + gap), 51, calendar.month_abbr[month], 10, "#57606a")
+        )
     for column in range(53):
         for weekday in range(7):
             current = grid_start + timedelta(days=column * 7 + weekday)
@@ -179,11 +187,20 @@ def render_contributions(year: int, total: int, days: dict[str, int]) -> str:
             parts.append(
                 f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="2" fill="{colors[level]}"/>'
             )
+    legend_x = 610
     parts.extend(
         [
-            svg_text(28, 145, "Source: GitHub contribution calendar", 10, "#8b949e"),
-            "</svg>",
+            svg_text(28, 169, "GitHub contribution calendar", 10, "#57606a"),
+            svg_text(552, 169, "Less", 10, "#57606a"),
         ]
+    )
+    for index, color in enumerate(colors):
+        parts.append(
+            f'<rect x="{legend_x + index * 13}" y="161" width="10" height="10" rx="2" fill="{color}"/>'
+        )
+    parts.append(svg_text(legend_x + len(colors) * 13 + 4, 169, "More", 10, "#57606a"))
+    parts.append(
+        "</svg>"
     )
     return "\n".join(parts) + "\n"
 
