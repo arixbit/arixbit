@@ -1,6 +1,5 @@
 <a href="https://github.com/arixbit">
-  <!-- Change the `github-readme-stats.anuraghazra1.vercel.app` to `github-readme-stats.vercel.app`  -->
-  <img align="right" src="https://github-readme-stats.vercel.app/api?username=arixbit&hide=[%22issues%22]&show_icons=true" />
+  <img align="right" width="200" alt="ArixBit GitHub avatar" src="https://avatars.githubusercontent.com/u/216866959?v=4" />
 </a>
 
 # 😄 Hi there, I'm ArixBit 👋
@@ -12,8 +11,6 @@
 
 - 💬 Ask me about anything an everything.
 - 📫 Read my blogs: [ArixBit](https://arixbit.me)
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=arixbit&theme=onedark)](https://github.com/ryo-ma/github-profile-trophy)
 
 <!--
 **arixbit/arixbit** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -29,4 +26,3 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-
